@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  color: #6e330b;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+:root {
+  --cookie-background: #f5c47f8c;
+  --cookie-color: #6e330b;
+  --cookie-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.title {
+  background-color: #f5c47f8b;
+  border-radius: 30px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+.cookie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  position: relative;
+}
+
+.cookie-wrapper {
+  position: relative;
+}
+
+.cookie {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--cookie-background);
+  box-shadow: var(--cookie-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cookie:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: var(--cookie-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.cookie:hover:before {
+  top: -30px;
+  width: 60px;
+  height: 60px;
+}
+
+.cookie:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--cookie-color);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05) translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 16px;
+  }
+
+  .container {
+    height: 90vh;
+    padding: 50px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-top: 30px;
+    padding: 8px;
+  }
+
+  .cookie-container {
+    min-height: auto;
+    padding: 55px 0;
+  }
+
+  .cookie {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cookie:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+  }
+}
