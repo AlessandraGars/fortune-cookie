@@ -11,7 +11,7 @@
 :root {
   --cookie-background: #f5c47f8c;
   --cookie-color: #6e330b;
-  --cookie-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  --cookie-shadow: 1px 1px 5px rgba(0, 0, 0, 0.543);
 }
 
 .container {
